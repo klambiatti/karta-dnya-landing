@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark light" />
-    <meta name="theme-color" content="#07090c" />
+    <meta name="theme-color" content="#0b0f12" />
 
     <title>Карта дня — маленький ритуал внимания к себе</title>
     <meta
@@ -12,22 +12,26 @@
       content="Telegram‑бот с метафорическими ассоциативными картами: одна карта в день, короткий вопрос и пара минут тишины — без давления, без спама, без «гаданий»."
     />
 
+    <link rel="canonical" href="https://klambiatti.github.io/karta-dnya-landing/" />
+
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
+    <meta property="og:url" content="https://klambiatti.github.io/karta-dnya-landing/" />
     <meta property="og:title" content="Карта дня — маленький ритуал внимания к себе" />
     <meta
       property="og:description"
       content="Одна карта. Один вопрос. Пара минут тишины. Бережная практика саморефлексии в Telegram."
     />
-    <meta property="og:image" content="./assets/og.png" />
+    <meta property="og:image" content="https://klambiatti.github.io/karta-dnya-landing/assets/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="./assets/og.png" />
+    <meta name="twitter:image" content="https://klambiatti.github.io/karta-dnya-landing/assets/og.png" />
 
     <link rel="icon" href="./assets/favicon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="./assets/favicon.png" />
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+    <link rel="preload" as="image" href="./assets/hero-cards-960.png" />
     <link rel="preload" href="./styles.css" as="style" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -98,7 +102,24 @@
           <div class="hero__visual" aria-hidden="true">
             <div class="card-mock">
               <div class="card-mock__frame">
-                <div class="card-mock__art"></div>
+                <div class="card-mock__art">
+                  <picture>
+                    <source
+                      srcset="./assets/hero-cards-640.png 640w, ./assets/hero-cards-960.png 960w"
+                      sizes="(min-width: 760px) 420px, 92vw"
+                      type="image/png"
+                    />
+                    <img
+                      class="card-mock__img"
+                      src="./assets/hero-cards-960.png"
+                      alt=""
+                      width="960"
+                      height="640"
+                      decoding="async"
+                      fetchpriority="high"
+                    />
+                  </picture>
+                </div>
                 <div class="card-mock__text">
                   <div class="card-mock__label">Вопрос дня</div>
                   <div class="card-mock__q" data-rotating-question>
