@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Карта дня">
   <defs>
     <radialGradient id="g" cx="30%" cy="30%" r="80%">
-      <stop offset="0%" stop-color="#fff2cc"/>
-      <stop offset="65%" stop-color="#d6b36a"/>
-      <stop offset="100%" stop-color="#9b7a3a"/>
+      <stop offset="0%" stop-color="#ffd7d7"/>
+      <stop offset="60%" stop-color="#ff2d2d"/>
+      <stop offset="100%" stop-color="#7a1212"/>
     </radialGradient>
   </defs>
-  <rect x="10" y="10" width="44" height="44" rx="14" fill="#0b0f12" stroke="rgba(245,242,234,0.18)"/>
+  <rect x="10" y="10" width="44" height="44" rx="14" fill="#07090c" stroke="rgba(232,238,246,0.18)"/>
   <circle cx="32" cy="32" r="14" fill="url(#g)"/>
-  <path d="M24 36c5-1 11-9 16-13" fill="none" stroke="rgba(11,15,18,0.88)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M24 36c5-1 11-9 16-13" fill="none" stroke="rgba(7,9,12,0.9)" stroke-width="3" stroke-linecap="round"/>
 </svg>
