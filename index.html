@@ -32,7 +32,7 @@
     <header class="topbar" role="banner">
       <div class="container topbar__inner">
         <a class="brand" href="#top" aria-label="Карта дня — наверх">
-          <img class="brand__logo" src="./assets/logo.png" alt="" width="28" height="28" />
+          <img class="brand__logo" src="./assets/logo.png" alt="" width="34" height="34" />
           <span class="brand__text">Карта дня</span>
         </a>
         <nav class="nav" aria-label="Навигация">
@@ -48,7 +48,7 @@
     </header>
 
     <main id="content">
-      <section id="top" class="hero" aria-label="Первый экран">
+      <section id="top" class="hero reveal" aria-label="Первый экран">
         <div class="container hero__inner">
           <div class="hero__copy">
             <p class="kicker">Тихая практика на 2 минуты</p>
@@ -68,7 +68,7 @@
               Без регистрации. Без подписок. Можно просто попробовать.
             </p>
 
-            <div class="trust">
+            <div class="trust" aria-label="Три важных обещания">
               <div class="trust__item">
                 <div class="trust__title">Без стыда</div>
                 <div class="trust__text">Пропустил день — ничего страшного.</div>
@@ -90,7 +90,9 @@
                 <div class="card-mock__art"></div>
                 <div class="card-mock__text">
                   <div class="card-mock__label">Вопрос дня</div>
-                  <div class="card-mock__q">Что во мне просит внимания — тихо и без спешки?</div>
+                  <div class="card-mock__q" data-rotating-question>
+                    Что во мне просит внимания — тихо и без спешки?
+                  </div>
                 </div>
               </div>
             </div>
@@ -99,7 +101,7 @@
         </div>
       </section>
 
-      <section id="how" class="section">
+      <section id="how" class="section reveal">
         <div class="container">
           <h2>Как это работает</h2>
           <p class="section__lead">
@@ -107,7 +109,7 @@
           </p>
 
           <ol class="steps">
-            <li class="step">
+            <li class="step step--primary">
               <div class="step__num" aria-hidden="true">1</div>
               <div class="step__body">
                 <div class="step__title">Открываешь бота и тянешь карту</div>
@@ -138,7 +140,7 @@
         </div>
       </section>
 
-      <section id="inside" class="section section--alt">
+      <section id="inside" class="section section--alt reveal">
         <div class="container">
           <h2>Что внутри</h2>
           <div class="cards">
@@ -171,7 +173,7 @@
         </div>
       </section>
 
-      <section id="forwho" class="section">
+      <section id="forwho" class="section reveal">
         <div class="container">
           <h2>Для кого — и когда полезно</h2>
           <div class="two-col">
@@ -184,7 +186,7 @@
                 <li>хочешь бережно вернуть регулярность без давления</li>
               </ul>
             </div>
-            <div class="panel panel--soft">
+            <div class="panel panel--muted">
               <h3>Если не твоё</h3>
               <p class="muted">
                 Если ты ищешь точные предсказания, «как будет» и «что точно случится» — этот бот не
@@ -196,31 +198,19 @@
         </div>
       </section>
 
-      <section id="questions" class="section section--alt">
+      <section id="questions" class="section section--alt reveal">
         <div class="container">
           <h2>Примеры вопросов</h2>
           <p class="section__lead">Небольшие, не героические. Такие, с которыми можно быть честным.</p>
-          <div class="quotes">
-            <figure class="quote">
-              <blockquote>Какой маленький шаг сейчас возможен?</blockquote>
-            </figure>
-            <figure class="quote">
-              <blockquote>Что во мне просит внимания — тихо и без спешки?</blockquote>
-            </figure>
-            <figure class="quote">
-              <blockquote>Где сегодня я могу быть к себе мягче?</blockquote>
-            </figure>
-            <figure class="quote">
-              <blockquote>Что я уже делаю достаточно хорошо?</blockquote>
-            </figure>
-            <figure class="quote">
-              <blockquote>Что мне важно сохранить в этом дне?</blockquote>
-            </figure>
-          </div>
+          <button class="quote-rotator" type="button" data-rotating-question aria-label="Нажми, чтобы увидеть другой вопрос">
+            <span class="quote-rotator__label">Например</span>
+            <span class="quote-rotator__text">Какой маленький шаг сейчас возможен?</span>
+            <span class="quote-rotator__hint">Нажми, чтобы сменить</span>
+          </button>
         </div>
       </section>
 
-      <section id="privacy" class="section">
+      <section id="privacy" class="section reveal">
         <div class="container">
           <h2>Приватность и данные</h2>
           <div class="privacy">
@@ -243,7 +233,7 @@
         </div>
       </section>
 
-      <section id="faq" class="section section--alt">
+      <section id="faq" class="section section--alt reveal">
         <div class="container">
           <h2>FAQ</h2>
           <div class="faq" role="region" aria-label="Частые вопросы">
@@ -297,7 +287,7 @@
         </div>
       </section>
 
-      <section class="section cta-final" aria-label="Финальный призыв">
+      <section class="section cta-final reveal" aria-label="Финальный призыв">
         <div class="container cta-final__inner">
           <div>
             <h2>Можно просто попробовать</h2>
@@ -320,10 +310,11 @@
         <div class="footer__left">
           <div class="footer__title">Карта дня</div>
           <div class="footer__meta">
-            <span>Проект</span>
-            <span aria-hidden="true">·</span>
+            <span class="footer__badge">тихий сад на 2 минуты</span>
+            <span class="footer__dot" aria-hidden="true">·</span>
             <span id="year"></span>
           </div>
+          <div class="footer__tagline">Возвращаться можно сколько угодно раз.</div>
         </div>
         <div class="footer__right">
           <a class="footer__link" data-author-link href="#" rel="noopener">Написать автору</a>
