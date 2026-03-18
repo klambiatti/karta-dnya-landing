@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-  <!-- Tabler Icons style (outline) -->
-  <path fill="currentColor" d="M12 22a2.75 2.75 0 0 0 2.64-2H9.36A2.75 2.75 0 0 0 12 22Z"/>
-  <path fill="currentColor" d="M18 9.8a6 6 0 1 0-12 0c0 3-1 4.3-2 5.6A1.5 1.5 0 0 0 5.2 18h13.6a1.5 1.5 0 0 0 1.2-2.6c-1-1.3-2-2.6-2-5.6ZM8 9.8a4 4 0 1 1 8 0c0 2.8.7 4.3 1.6 5.6H6.4C7.3 14.1 8 12.6 8 9.8Z"/>
+  <!-- Feather Icons (MIT): bell -->
+  <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13.73 21a2 2 0 0 1-3.46 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

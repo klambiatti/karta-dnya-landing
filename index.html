@@ -19,10 +19,15 @@
       property="og:description"
       content="Одна карта. Один вопрос. Пара минут тишины. Бережная практика саморефлексии в Telegram."
     />
-    <meta property="og:image" content="./assets/og.svg" />
+    <meta property="og:image" content="./assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="./assets/og.png" />
 
-    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./assets/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./assets/favicon.png" />
     <link rel="preload" href="./styles.css" as="style" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -246,47 +251,61 @@
             <details class="faq__item">
               <summary>Это гадание?</summary>
               <div class="faq__body">
-                Нет. Это практика рефлексии через образы: карта — как повод заметить мысли и чувства,
-                а вопрос — как мягкий фокус.
+                <div class="faq__content">
+                  Нет. Это практика рефлексии через образы: карта — как повод заметить мысли и чувства,
+                  а вопрос — как мягкий фокус.
+                </div>
               </div>
             </details>
             <details class="faq__item">
               <summary>Можно ли тянуть карты чаще одной в день?</summary>
               <div class="faq__body">
-                В боте есть мягкий лимит «одна карта в день». Он не про запреты, а про бережность —
-                чтобы практика оставалась лёгкой, а не превращалась в «надо ещё».
+                <div class="faq__content">
+                  В боте есть мягкий лимит «одна карта в день». Он не про запреты, а про бережность —
+                  чтобы практика оставалась лёгкой, а не превращалась в «надо ещё».
+                </div>
               </div>
             </details>
             <details class="faq__item">
               <summary>Можно ли выбрать колоду?</summary>
               <div class="faq__body">
-                Да. Можно тянуть из «любой» или выбрать конкретную колоду.
+                <div class="faq__content">
+                  Да. Можно тянуть из «любой» или выбрать конкретную колоду.
+                </div>
               </div>
             </details>
             <details class="faq__item">
               <summary>Можно ли отключить напоминания?</summary>
               <div class="faq__body">
-                Да. Напоминания полностью настраиваются — включая вариант «не напоминать вообще».
+                <div class="faq__content">
+                  Да. Напоминания полностью настраиваются — включая вариант «не напоминать вообще».
+                </div>
               </div>
             </details>
             <details class="faq__item">
               <summary>Что такое еженедельный дайджест?</summary>
               <div class="faq__body">
-                Раз в неделю бот показывает твои карты за неделю — чтобы заметить повторяющиеся темы
-                и образы, если тебе это интересно.
+                <div class="faq__content">
+                  Раз в неделю бот показывает твои карты за неделю — чтобы заметить повторяющиеся темы
+                  и образы, если тебе это интересно.
+                </div>
               </div>
             </details>
             <details class="faq__item">
               <summary>Где посмотреть бейджи и статистику?</summary>
               <div class="faq__body">
-                В боте: <code>/me</code> и <code>/badges</code>.
+                <div class="faq__content">
+                  В боте: <code>/me</code> и <code>/badges</code>.
+                </div>
               </div>
             </details>
             <details class="faq__item">
               <summary>Что именно бот хранит?</summary>
               <div class="faq__body">
-                Историю вытяжек, часовой пояс и счётчики для функций. Подробно — команда
-                <code>/privacy</code> в боте.
+                <div class="faq__content">
+                  Историю вытяжек, часовой пояс и счётчики для функций. Подробно — команда
+                  <code>/privacy</code> в боте.
+                </div>
               </div>
             </details>
           </div>
@@ -316,8 +335,8 @@
         <div class="footer__left">
           <div class="footer__title">Карта дня</div>
           <div class="footer__meta">
-            <span class="footer__badge">тихий сад на 2 минуты</span>
-            <span class="footer__dot" aria-hidden="true">·</span>
+            <span class="footer__note">тихий сад на 2 минуты</span>
+            <span class="footer__sep" aria-hidden="true">·</span>
             <span id="year"></span>
           </div>
           <div class="footer__tagline">Возвращаться можно сколько угодно раз.</div>

@@ -29,14 +29,79 @@ function setYear() {
 }
 
 function faqSingleOpen() {
-  const items = Array.from(document.querySelectorAll(".faq details"));
+  const prefersReduced = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+  const items = Array.from(document.querySelectorAll(".faq details.faq__item"));
   if (!items.length) return;
-  items.forEach((d) => {
-    d.addEventListener("toggle", () => {
-      if (!d.open) return;
-      items.forEach((other) => {
-        if (other !== d) other.open = false;
+
+  if (prefersReduced) {
+    // Keep native behavior, but still ensure single-open.
+    items.forEach((d) => {
+      d.addEventListener("toggle", () => {
+        if (!d.open) return;
+        items.forEach((other) => {
+          if (other !== d) other.open = false;
+        });
       });
+    });
+    return;
+  }
+
+  function animate(openingDetails, body, from, to, onFinish) {
+    body.style.height = `${from}px`;
+    body.style.opacity = from === 0 ? "0" : "1";
+    body.style.willChange = "height, opacity";
+
+    const a = body.animate(
+      [
+        { height: `${from}px`, opacity: from === 0 ? 0 : 1 },
+        { height: `${to}px`, opacity: to === 0 ? 0 : 1 },
+      ],
+      { duration: 220, easing: "cubic-bezier(0.2, 0.7, 0.2, 1)" },
+    );
+
+    a.onfinish = () => {
+      body.style.willChange = "";
+      body.style.height = "";
+      body.style.opacity = "";
+      onFinish?.();
+    };
+  }
+
+  items.forEach((d) => {
+    const summary = d.querySelector("summary");
+    const body = d.querySelector(".faq__body");
+    const content = d.querySelector(".faq__content");
+    if (!summary || !body || !content) return;
+
+    summary.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const isOpen = d.hasAttribute("open");
+
+      // close others first (without animation jump)
+      if (!isOpen) {
+        items.forEach((other) => {
+          if (other === d) return;
+          if (!other.hasAttribute("open")) return;
+          const ob = other.querySelector(".faq__body");
+          const oc = other.querySelector(".faq__content");
+          if (!ob || !oc) {
+            other.removeAttribute("open");
+            return;
+          }
+          const h = oc.scrollHeight;
+          animate(other, ob, h, 0, () => other.removeAttribute("open"));
+        });
+      }
+
+      if (!isOpen) {
+        d.setAttribute("open", "");
+        const h = content.scrollHeight;
+        animate(d, body, 0, h);
+      } else {
+        const h = content.scrollHeight;
+        animate(d, body, h, 0, () => d.removeAttribute("open"));
+      }
     });
   });
 }

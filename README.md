@@ -70,4 +70,4 @@ python3 -m http.server 8080
 
 ## Иконки
 
-Иконки в `assets/icons/*.svg` взяты в стиле **Tabler Icons** (open-source). Если захотите — можем заменить на другой набор (например, Lucide) без изменений в верстке.
+Иконки в `assets/icons/*.svg` — **Feather Icons** (MIT, open-source). Если захотите — можем заменить на другой набор (например, Lucide) без изменений в верстке.
