@@ -67,3 +67,7 @@ python3 -m http.server 8080
 - **Netlify**: просто перетащите папку или подключите репозиторий, publish directory = `karta-dnya-landing/`
 - **Vercel**: как Static Site (output = `karta-dnya-landing/`)
 - **GitHub Pages**: из папки / корня репозитория (если перенесёте проект в репо)
+
+## Иконки
+
+Иконки в `assets/icons/*.svg` взяты в стиле **Tabler Icons** (open-source). Если захотите — можем заменить на другой набор (например, Lucide) без изменений в верстке.
