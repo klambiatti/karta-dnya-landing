@@ -1,15 +1,18 @@
 // Landing config
-const BOT_USERNAME = "@mac_of_the_day_bot";
+const BOT_USERNAME = "@MAC_of_the_day_bot";
 const AUTHOR_URL = "https://klambiatti.github.io/links/";
 
-// Deep-link (safe even if bot ignores start param)
-const BOT_LINK = `https://t.me/${BOT_USERNAME.replace(/^@/, "")}?start=from_site`;
+// Deep-link: метка воронки с лендинга (бот может игнорировать — ссылка всё равно валидна)
+const BOT_LINK = `https://t.me/${BOT_USERNAME.replace(/^@/, "")}?start=landing`;
 
 function setLinks() {
   const botLinks = document.querySelectorAll("[data-bot-link]");
   botLinks.forEach((a) => {
     a.setAttribute("href", BOT_LINK);
-    a.setAttribute("aria-label", "Открыть бота в Telegram (откроется в Telegram)");
+    a.setAttribute(
+      "aria-label",
+      "Попробовать бесплатно: открыть бота «Карта дня» в Telegram",
+    );
     a.setAttribute("target", "_blank");
     a.setAttribute("rel", "noopener noreferrer");
   });
@@ -148,11 +151,6 @@ function rotateQuestions() {
   const initial = stored || pickRandom(QUESTIONS);
   localStorage.setItem(storageKey, initial);
 
-  // 1) Mock question in hero
-  const heroQ = document.querySelector("[data-rotating-question]");
-  if (heroQ) heroQ.textContent = initial;
-
-  // 2) Single rotating pill in "Примеры вопросов"
   const rotator = document.querySelector(".quote-rotator");
   const rotatorText = rotator?.querySelector(".quote-rotator__text");
   if (!rotator || !rotatorText) return;
@@ -212,9 +210,45 @@ function revealOnScroll() {
   nodes.forEach((n) => io.observe(n));
 }
 
+function initCopyBotLink() {
+  const btn = document.getElementById("copy-bot-link");
+  if (!btn) return;
+  const defaultLabel = "Скопировать ссылку на бота";
+  btn.addEventListener("click", () => {
+    const done = () => {
+      btn.textContent = "Ссылка скопирована";
+      window.setTimeout(() => {
+        btn.textContent = defaultLabel;
+      }, 2200);
+    };
+    const fallback = () => {
+      const ta = document.createElement("textarea");
+      ta.value = BOT_LINK;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand("copy");
+        done();
+      } catch {
+        /* ignore */
+      }
+      document.body.removeChild(ta);
+    };
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(BOT_LINK).then(done).catch(fallback);
+    } else {
+      fallback();
+    }
+  });
+}
+
 setLinks();
 setYear();
 faqSingleOpen();
 addOutboundTrackingHint();
 rotateQuestions();
 revealOnScroll();
+initCopyBotLink();

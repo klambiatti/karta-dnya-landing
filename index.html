@@ -2,14 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="dark light" />
     <meta name="theme-color" content="#0b0f12" />
 
-    <title>Карта дня — маленький ритуал внимания к себе</title>
+    <title>Карта дня — MAC of the Day</title>
     <meta
       name="description"
-      content="Telegram‑бот с метафорическими ассоциативными картами: одна карта в день, короткий вопрос и пара минут тишины — без давления, без спама, без «гаданий»."
+      content="Одна метафорическая карта в день в Telegram: мягкая практика внимания к себе, без гадания. Колоды, рефлексия, по желанию — вопрос дня и тема недели."
     />
 
     <link rel="canonical" href="https://klambiatti.github.io/karta-dnya-landing/" />
@@ -17,16 +17,21 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:url" content="https://klambiatti.github.io/karta-dnya-landing/" />
-    <meta property="og:title" content="Карта дня — маленький ритуал внимания к себе" />
+    <meta property="og:title" content="Карта дня — MAC of the Day" />
     <meta
       property="og:description"
-      content="Одна карта. Один вопрос. Пара минут тишины. Бережная практика саморефлексии в Telegram."
+      content="Одна метафорическая карта в день в Telegram: мягкая практика внимания к себе, без гадания. Колоды, рефлексия, по желанию — вопрос дня и тема недели."
     />
     <meta property="og:image" content="https://klambiatti.github.io/karta-dnya-landing/assets/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Карта дня — MAC of the Day" />
+    <meta
+      name="twitter:description"
+      content="Одна метафорическая карта в день в Telegram: мягкая практика внимания к себе, без гадания."
+    />
     <meta name="twitter:image" content="https://klambiatti.github.io/karta-dnya-landing/assets/og.png" />
 
     <link rel="icon" href="./assets/favicon.png" type="image/png" />
@@ -46,38 +51,39 @@
         </a>
         <nav class="nav" aria-label="Навигация">
           <a class="nav__link" href="#how">Как это работает</a>
+          <a class="nav__link" href="#look">Как выглядит</a>
           <a class="nav__link" href="#inside">Что внутри</a>
           <a class="nav__link" href="#privacy">Приватность</a>
           <a class="nav__link" href="#faq">FAQ</a>
         </nav>
         <a class="btn btn--primary topbar__cta" data-bot-link href="#" rel="noopener">
-          Открыть бота
+          Попробовать бесплатно
         </a>
       </div>
     </header>
 
-    <main id="content">
+    <main id="content" aria-labelledby="hero-heading">
       <section id="top" class="hero reveal" aria-label="Первый экран">
         <div class="container hero__inner">
           <div class="hero__copy">
             <div class="hero__group hero__group--intro">
-              <p class="kicker">Тихая практика на 2 минуты</p>
-              <h1>Карта дня — маленький ритуал внимания к себе</h1>
+              <p class="kicker">Карта дня · MAC of the Day</p>
+              <h1 id="hero-heading">Одна минута внимания к себе — каждый день</h1>
               <p class="lead">
-                В Telegram ты тянешь одну метафорическую карту, получаешь изображение и короткий
-                вопрос — чтобы мягко остановиться и заметить, что с тобой сегодня.
+                Образ как зеркало: можно просто посмотреть или чуть задержаться с вопросами к себе.
+                Это не гадание и не предсказание будущего — твой ритм и твой часовой пояс.
               </p>
             </div>
 
             <div class="hero__group hero__group--cta">
               <div class="cta-row">
                 <a class="btn btn--primary btn--lg" data-bot-link href="#" rel="noopener">
-                  Открыть бота в Telegram
+                  Попробовать бесплатно
                 </a>
                 <a class="btn btn--ghost btn--lg" href="#how">Как это работает</a>
               </div>
               <p class="micro">
-                Без регистрации. Без подписок. Можно просто попробовать.
+                Регистрация не нужна — только Telegram. За пару шагов до первой карты.
               </p>
             </div>
 
@@ -88,8 +94,8 @@
                   <div class="trust__text">Пропустил день — ничего страшного.</div>
                 </div>
                 <div class="trust__item">
-                  <div class="trust__title">Не «гадание»</div>
-                  <div class="trust__text">Это про вопросы, а не про предсказания.</div>
+                  <div class="trust__title">Не предсказание</div>
+                  <div class="trust__text">Про ассоциации и самонаблюдение, без «значит так судьба».</div>
                 </div>
                 <div class="trust__item">
                   <div class="trust__title">Без спама</div>
@@ -121,10 +127,8 @@
                   </picture>
                 </div>
                 <div class="card-mock__text">
-                  <div class="card-mock__label">Вопрос дня</div>
-                  <div class="card-mock__q" data-rotating-question>
-                    Что во мне просит внимания — тихо и без спешки?
-                  </div>
+                  <div class="card-mock__label">Образ дня</div>
+                  <div class="card-mock__q">Сначала — картинка. Текст и наводки — по желанию.</div>
                 </div>
               </div>
             </div>
@@ -151,8 +155,11 @@
             <li class="step">
               <div class="step__num" aria-hidden="true">2</div>
               <div class="step__body">
-                <div class="step__title">Смотришь на образ и читаешь вопрос</div>
-                <div class="step__text">Без «правильно». Можно просто заметить первую мысль.</div>
+                <div class="step__title">Побыл с образом — дальше как хочешь</div>
+                <div class="step__text">
+                  Сначала приходит картинка. Короткий текст, шаг «дальше» и наводки — только если
+                  захочешь, без жёстких трактовок.
+                </div>
               </div>
             </li>
             <li class="step">
@@ -172,14 +179,45 @@
         </div>
       </section>
 
+      <section id="look" class="section reveal">
+        <div class="container">
+          <h2>Как это выглядит в Telegram</h2>
+          <p class="section__lead">
+            Сообщение в чате с ботом: сначала образ, чтобы не спешить с выводами. «Стены текста» по
+            умолчанию нет.
+          </p>
+          <div class="tg-mock" role="img" aria-label="Пример: в чате приходит карта как изображение">
+            <div class="tg-mock__chrome">
+              <span class="tg-mock__dot" aria-hidden="true"></span>
+              <span class="tg-mock__dot" aria-hidden="true"></span>
+              <span class="tg-mock__dot" aria-hidden="true"></span>
+              <span class="tg-mock__title">MAC of the Day</span>
+            </div>
+            <div class="tg-mock__body">
+              <div class="tg-mock__bubble">
+                <div class="tg-mock__thumb" aria-hidden="true"></div>
+                <p class="tg-mock__caption">Образ дня · можно просто посмотреть</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="inside" class="section section--alt reveal">
         <div class="container">
           <h2>Что внутри</h2>
+          <p class="inside-kicker">
+            Бесплатно: один спокойный контакт в день, без спама. Отписаться можно в любой момент —
+            без вины.
+          </p>
           <div class="cards">
             <article class="card">
               <div class="card__icon" data-icon="deck" aria-hidden="true"></div>
               <h3>Колоды</h3>
-              <p>Можно тянуть из «любой» — или выбрать конкретную колоду под настроение.</p>
+              <p>
+                Колоды с разным настроением: выбираешь из доступных или доверяешься случаю — без
+                лишнего жаргона.
+              </p>
             </article>
             <article class="card">
               <div class="card__icon" data-icon="bell" aria-hidden="true"></div>
@@ -188,8 +226,10 @@
             </article>
             <article class="card">
               <div class="card__icon" data-icon="digest" aria-hidden="true"></div>
-              <h3>Еженедельный дайджест</h3>
-              <p>Раз в неделю — твои карты за неделю, чтобы заметить темы и повторяющиеся образы.</p>
+              <h3>Тема недели и дайджест</h3>
+              <p>
+                Если хочется глубины — недельный фокус и сводка карт; всё по желанию, без давления.
+              </p>
             </article>
             <article class="card">
               <div class="card__icon" data-icon="badge" aria-hidden="true"></div>
@@ -234,7 +274,7 @@
         <div class="container">
           <h2>Примеры вопросов</h2>
           <p class="section__lead">Небольшие, не героические. Такие, с которыми можно быть честным.</p>
-          <button class="quote-rotator" type="button" data-rotating-question aria-label="Нажми, чтобы увидеть другой вопрос">
+          <button class="quote-rotator" type="button" aria-label="Нажми, чтобы увидеть другой вопрос">
             <span class="quote-rotator__label">Например</span>
             <span class="quote-rotator__text">Какой маленький шаг сейчас возможен?</span>
             <span class="quote-rotator__hint">Нажми, чтобы сменить</span>
@@ -246,6 +286,10 @@
         <div class="container">
           <h2>Приватность и данные</h2>
           <div class="privacy">
+            <p class="privacy__disclaimer">
+              Это не замена психотерапии и не работа со специалистом — скорее пауза и
+              самонаблюдение в удобном для тебя темпе.
+            </p>
             <p>
               Бот хранит только то, что нужно для функций:
             </p>
@@ -273,8 +317,8 @@
               <summary>Это гадание?</summary>
               <div class="faq__body">
                 <div class="faq__content">
-                  Нет. Это практика рефлексии через образы: карта — как повод заметить мысли и чувства,
-                  а вопрос — как мягкий фокус.
+                  Нет. Это практика внимания к себе через образы: карта как «зеркало» для ассоциаций,
+                  без предсказания будущего. Вопросы и наводки — по желанию, как мягкий фокус.
                 </div>
               </div>
             </details>
@@ -338,14 +382,15 @@
           <div>
             <h2>Можно просто попробовать</h2>
             <p class="section__lead">
-              Один раз — уже достаточно, чтобы понять, твоё это или нет.
+              Один раз — уже достаточно, чтобы понять, твоё это или нет. Без обязательства
+              «отвечать» на каждый вопрос.
             </p>
           </div>
           <div class="cta-final__actions">
             <a class="btn btn--primary btn--lg" data-bot-link href="#" rel="noopener">
-              Открыть бота в Telegram
+              Попробовать бесплатно
             </a>
-            <p class="micro">Никаких обязательств. Можно уйти в любой момент.</p>
+            <p class="micro">Регистрация не нужна — только Telegram. Уйти можно в любой момент.</p>
           </div>
         </div>
       </section>
@@ -365,6 +410,9 @@
         <div class="footer__right">
           <a class="footer__link" data-author-link href="#" rel="noopener">Написать автору</a>
           <a class="footer__link" href="#privacy">Приватность</a>
+          <button type="button" class="footer__link footer__link--btn" id="copy-bot-link">
+            Скопировать ссылку на бота
+          </button>
         </div>
       </div>
     </footer>

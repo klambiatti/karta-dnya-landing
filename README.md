@@ -18,7 +18,7 @@ python3 -m http.server 8080
 
 В `main.js` замените:
 
-- `BOT_USERNAME` → сейчас стоит `@mac_of_the_day_bot` (можно поменять при необходимости)
+- `BOT_USERNAME` → сейчас `@MAC_of_the_day_bot`, deep link с `?start=landing` для воронки (можно поменять)
 - `AUTHOR_USERNAME` → например `sergei_username`
 
 Ссылки на кнопках (CTA) обновятся автоматически.
